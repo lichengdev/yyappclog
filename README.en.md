@@ -19,7 +19,7 @@ Software architecture description
 #### Instructions
 
 
-   git clone https://gitee.com/lichengdev/yyappclog.git  从远程库中克隆
+   git clone https://github.com/lichengdev/yyappclog.git  从远程库中克隆
    git branch  查看当前所有的分支
    git checkout 分支名  作用是切换分支
    
