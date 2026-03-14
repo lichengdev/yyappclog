@@ -12,9 +12,10 @@ Software architecture description
 
 #### Installation
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+
+   git config --global user.name "你的姓名"
+   git config --global user.email "你的邮箱@example.com"
+   
 
 #### Instructions
 

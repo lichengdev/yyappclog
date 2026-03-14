@@ -13,9 +13,10 @@
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+
+   git config --global user.name "你的姓名"
+   git config --global user.email "你的邮箱@example.com"
+   
 
 #### 使用说明
 
