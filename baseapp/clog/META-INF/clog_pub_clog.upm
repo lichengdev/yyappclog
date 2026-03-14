@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="gb2312"?>
+<module name="baseapp">
+	<public>
+		<component priority="0" singleton="true" remote="true" tx="CMT" supportAlias="true">
+			<interface>nc.itf.baseapp.clog.pub_clog.IClogVOService</interface>
+			<implementation>nc.impl.baseapp.clog.pub_clog.ClogVOServiceImpl</implementation>
+		</component> 
+	</public>
+</module>

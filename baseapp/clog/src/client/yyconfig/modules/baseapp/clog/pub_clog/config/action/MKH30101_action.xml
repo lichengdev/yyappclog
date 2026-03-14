@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<actions>
+  <action>
+    <name>baseapp.clog.SaveClogVOAction</name>
+    <label>保存动作</label>
+    <clazz>nccloud.web.baseapp.clog.pub_clog.action.SaveClogVOAction</clazz>
+  </action>
+  <action>
+    <name>baseapp.clog.LoadClogVOAction</name>
+    <label>卡片查询动作</label>
+    <clazz>nccloud.web.baseapp.clog.pub_clog.action.LoadClogVOAction</clazz>
+  </action>
+  <action>
+    <name>baseapp.clog.CopyClogVOAction</name>
+    <label>复制</label>
+    <clazz>nccloud.web.baseapp.clog.pub_clog.action.CopyClogVOAction</clazz>
+  </action>
+  <action>
+    <name>baseapp.clog.PrintClogVOAction</name>
+    <label>打印动作</label>
+    <clazz>nccloud.web.baseapp.clog.pub_clog.action.PrintClogVOAction</clazz>
+  </action>
+  <action>
+    <name>baseapp.clog.ListClogVOAction</name>
+    <label>列表查询动作</label>
+    <clazz>nccloud.web.baseapp.clog.pub_clog.action.ListClogVOAction</clazz>
+  </action>
+  <action>
+    <name>baseapp.clog.DeleteClogVOAction</name>
+    <label>删除动作</label>
+    <clazz>nccloud.web.baseapp.clog.pub_clog.action.DeleteClogVOAction</clazz>
+  </action>
+  <action>
+    <name>baseapp.clog.Pub_clogDefaultGridRefAction</name>
+    <label>默认表型参照（非档案特性生成）</label>
+    <clazz>nccloud.web.baseapp.clog.pub_clog.action.Pub_clogDefaultGridRefAction</clazz>
+  </action>
+  <action>
+    <name>baseapp.clog.AddClogVOAction</name>
+    <label>新增动作</label>
+    <clazz>nccloud.web.baseapp.clog.pub_clog.action.AddClogVOAction</clazz>
+  </action>
+</actions>

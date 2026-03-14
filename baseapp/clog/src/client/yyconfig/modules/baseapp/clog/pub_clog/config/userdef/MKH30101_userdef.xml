@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<userdefs>
+<!--��ƽ̨��ʱ��֧��ͬһ��ʵ�����ö����ͬ��ͷ���Զ�����˴���ʱ������������ƽ̨�޸����ٵ���-->
+	<userdef> 
+		<name>baseapp.pub_clog</name>
+		<prefix>def</prefix>
+		<processor>nccloud.web.uapbd.commons.web.UserDefCommonProcessor</processor>
+		<defrulecode></defrulecode>
+	</userdef>
+	<userdef>
+		<name>baseapp.pub_clog</name>
+		<prefix>def0</prefix>
+		<processor>nccloud.web.uapbd.commons.web.UserDefCommonProcessor</processor>
+		<defrulecode></defrulecode>
+	</userdef> 
+</userdefs>

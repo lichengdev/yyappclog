@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding='gb2312'?>
+<module >
+		 
+	<public>
+		<!-- <component singleton="true" remote="true" supportAlias="false" tx="NONE"> -->
+	    <component accessProtected="false" priority="0" singleton="true" remote="true" supportAlias="false" tx="NONE">
+			<interface>nc.bs.util.NC_Itf_ApiDBService</interface>
+			<implementation>nc.bs.api.NC_Itf_ApiDBServiceImpl</implementation>
+		</component> 
+	</public>
+
+	<private>
+	</private>
+</module>

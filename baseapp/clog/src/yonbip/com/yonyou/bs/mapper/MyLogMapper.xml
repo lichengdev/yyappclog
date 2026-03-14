@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="nc.bs.mapper.MyLogMapper">
+ 
+ <!--日志部分-Entity*********************************************-->
+ <!-- 保存单条日志 -->
+<insert id="insertMyLog" parameterType="com.yonyou.bs.entity.ClogEntity">
+  INSERT INTO pub_clog
+  (
+    pk_log, code, name, src_sys, src_id, res_direct,
+    logdate, ip, url, action, sessionid, token, userid,
+    state, response, request, thwmsg, message, restcode,
+    startime, endtime, runtime, datatype, billdate,
+    enable,
+    def01, def02, def03, def04, def05,
+    def06, def07, def08, def09, def10,
+    def11, def12, def13, def14, def15,
+    def16, def17, def18, def19, def20,
+    pk_group, pk_org, pk_org_v,
+    creator, creationtime, modifier, modifiedtime, memo,
+    cookes,referer,localaddr,clientip,
+    tenantid,tenantcode
+  )
+  VALUES
+  (
+    #{clog.pkLog},       #{clog.code},       #{clog.name},
+    #{clog.srcSys},      #{clog.srcId},      #{clog.resDirect},
+    #{clog.logdate},     #{clog.ip},         #{clog.url},
+    #{clog.action},      #{clog.sessionid},  #{clog.token},
+    #{clog.userid},      #{clog.state},      #{clog.response},
+    #{clog.request},     #{clog.thwmsg},     #{clog.message},
+    #{clog.restcode},    #{clog.startime},   #{clog.endtime},
+    #{clog.runtime},     #{clog.datatype},   #{clog.billdate},
+    #{clog.enable},
+    #{clog.def01},       #{clog.def02},      #{clog.def03},
+    #{clog.def04},       #{clog.def05},      #{clog.def06},
+    #{clog.def07},       #{clog.def08},      #{clog.def09},
+    #{clog.def10},       #{clog.def11},      #{clog.def12},
+    #{clog.def13},       #{clog.def14},      #{clog.def15},
+    #{clog.def16},       #{clog.def17},      #{clog.def18},
+    #{clog.def19},       #{clog.def20},
+    #{clog.pkGroup},     #{clog.pkOrg},      #{clog.pkOrgV},
+    #{clog.creator},     #{clog.creationtime}, #{clog.modifier},
+    #{clog.modifiedtime},#{clog.memo},
+    #{clog.cookes},      #{clog.referer},    #{clog.localaddr}, 
+    #{clog.clientip},    #{clog.tenantid},   #{clog.tenantcode}
+  )
+</insert>
+ <!-- 根据主键 pk_log 更新实体中非 null 字段 -->
+<update id="updateMyLog" parameterType="com.yonyou.bs.entity.ClogEntity">
+  UPDATE pub_clog
+  <set>
+    <if test="clog.cookes != null">cookes = #{clog.cookes},</if>
+    <if test="clog.referer != null">referer = #{clog.referer},</if>
+    <if test="clog.localaddr != null">localaddr = #{clog.localaddr},</if>
+    <if test="clog.clientip != null">clientip = #{clog.clientip},</if> 
+    <if test="clog.tenantid != null">tenantid = #{clog.tenantid},</if>
+    <if test="clog.tenantcode != null">tenantcode = #{clog.tenantcode},</if> 
+    
+    <if test="clog.code != null">code = #{clog.code},</if>
+    <if test="clog.name != null">name = #{clog.name},</if>
+    <if test="clog.srcSys != null">src_sys = #{clog.srcSys},</if>
+    <if test="clog.srcId != null">src_id = #{clog.srcId},</if>
+    <if test="clog.resDirect != null">res_direct = #{clog.resDirect},</if>
+    <if test="clog.logdate != null">logdate = #{clog.logdate},</if>
+    <if test="clog.ip != null">ip = #{clog.ip},</if>
+    <if test="clog.url != null">url = #{clog.url},</if>
+    <if test="clog.action != null">action = #{clog.action},</if>
+    <if test="clog.sessionid != null">sessionid = #{clog.sessionid},</if>
+    <if test="clog.token != null">token = #{clog.token},</if>
+    <if test="clog.userid != null">userid = #{clog.userid},</if>
+    <if test="clog.state != null">state = #{clog.state},</if>
+    <if test="clog.response != null">response = #{clog.response},</if>
+    <if test="clog.request != null">request = #{clog.request},</if>
+    <if test="clog.thwmsg != null">thwmsg = #{clog.thwmsg},</if>
+    <if test="clog.message != null">message = #{clog.message},</if>
+    <if test="clog.restcode != null">restcode = #{clog.restcode},</if>
+    <if test="clog.startime != null">startime = #{clog.startime},</if>
+    <if test="clog.endtime != null">endtime = #{clog.endtime},</if>
+    <if test="clog.runtime != null">runtime = #{clog.runtime},</if>
+    <if test="clog.datatype != null">datatype = #{clog.datatype},</if>
+    <if test="clog.billdate != null">billdate = #{clog.billdate},</if>
+    <if test="clog.enable != null">enable = #{clog.enable},</if>
+    <if test="clog.def01 != null">def01 = #{clog.def01},</if>
+    <if test="clog.def02 != null">def02 = #{clog.def02},</if>
+    <if test="clog.def03 != null">def03 = #{clog.def03},</if>
+    <if test="clog.def04 != null">def04 = #{clog.def04},</if>
+    <if test="clog.def05 != null">def05 = #{clog.def05},</if>
+    <if test="clog.def06 != null">def06 = #{clog.def06},</if>
+    <if test="clog.def07 != null">def07 = #{clog.def07},</if>
+    <if test="clog.def08 != null">def08 = #{clog.def08},</if>
+    <if test="clog.def09 != null">def09 = #{clog.def09},</if>
+    <if test="clog.def10 != null">def10 = #{clog.def10},</if>
+    <if test="clog.def11 != null">def11 = #{clog.def11},</if>
+    <if test="clog.def12 != null">def12 = #{clog.def12},</if>
+    <if test="clog.def13 != null">def13 = #{clog.def13},</if>
+    <if test="clog.def14 != null">def14 = #{clog.def14},</if>
+    <if test="clog.def15 != null">def15 = #{clog.def15},</if>
+    <if test="clog.def16 != null">def16 = #{clog.def16},</if>
+    <if test="clog.def17 != null">def17 = #{clog.def17},</if>
+    <if test="clog.def18 != null">def18 = #{clog.def18},</if>
+    <if test="clog.def19 != null">def19 = #{clog.def19},</if>
+    <if test="clog.def20 != null">def20 = #{clog.def20},</if>
+    <if test="clog.pkGroup != null">pk_group = #{clog.pkGroup},</if>
+    <if test="clog.pkOrg != null">pk_org = #{clog.pkOrg},</if>
+    <if test="clog.pkOrgV != null">pk_org_v = #{clog.pkOrgV},</if>
+    <if test="clog.creator != null">creator = #{clog.creator},</if>
+    <if test="clog.creationtime != null">creationtime = #{clog.creationtime},</if>
+    <if test="clog.modifier != null">modifier = #{clog.modifier},</if>
+    <if test="clog.modifiedtime != null">modifiedtime = #{clog.modifiedtime},</if>
+    <if test="clog.memo != null">memo = #{clog.memo}</if>
+  </set>
+  WHERE pk_log = #{clog.pkLog}
+</update>
+
+<delete id="deleteMyLogByPk" parameterType="com.yonyou.bs.entity.ClogEntity">
+  DELETE FROM pub_clog
+  <where>
+    pk_log = #{clog.pk_log} 
+    <!-- 需要更多条件继续追加 -->
+  </where>
+</delete>
+
+<!-- 根据实体中非 null 字段做动态条件删除 -->
+<delete id="deleteMyLog" parameterType="com.yonyou.bs.entity.ClogEntity">
+  DELETE FROM pub_clog
+  <where>    
+    <if test="clog.cookes != null">cookes = #{clog.cookes},</if>
+    <if test="clog.referer != null">referer = #{clog.referer},</if>
+    <if test="clog.localaddr != null">localaddr = #{clog.localaddr},</if>
+    <if test="clog.clientip != null">clientip = #{clog.clientip},</if> 
+    <if test="clog.tenantid != null">tenantid = #{clog.tenantid},</if>
+    <if test="clog.tenantcode != null">tenantcode = #{clog.tenantcode},</if> 
+    
+    <if test="clog.pkLog != null">  pk_log = #{clog.pkLog}</if>
+    <if test="clog.code != null">code = #{clog.code},</if>
+    <if test="clog.name != null">name = #{clog.name},</if>
+    <if test="clog.srcSys != null">src_sys = #{clog.srcSys},</if>
+    <if test="clog.srcId != null">src_id = #{clog.srcId},</if>
+    <if test="clog.resDirect != null">res_direct = #{clog.resDirect},</if>
+    <if test="clog.logdate != null">logdate = #{clog.logdate},</if>
+    <if test="clog.ip != null">ip = #{clog.ip},</if>
+    <if test="clog.url != null">url = #{clog.url},</if>
+    <if test="clog.action != null">action = #{clog.action},</if>
+    <if test="clog.sessionid != null">sessionid = #{clog.sessionid},</if>
+    <if test="clog.token != null">token = #{clog.token},</if>
+    <if test="clog.userid != null">userid = #{clog.userid},</if>
+    <if test="clog.state != null">state = #{clog.state},</if>
+    <if test="clog.response != null">response = #{clog.response},</if>
+    <if test="clog.request != null">request = #{clog.request},</if>
+    <if test="clog.thwmsg != null">thwmsg = #{clog.thwmsg},</if>
+    <if test="clog.message != null">message = #{clog.message},</if>
+    <if test="clog.restcode != null">restcode = #{clog.restcode},</if>
+    <if test="clog.startime != null">startime = #{clog.startime},</if>
+    <if test="clog.endtime != null">endtime = #{clog.endtime},</if>
+    <if test="clog.runtime != null">runtime = #{clog.runtime},</if>
+    <if test="clog.datatype != null">datatype = #{clog.datatype},</if>
+    <if test="clog.billdate != null">billdate = #{clog.billdate},</if>
+    <if test="clog.enable != null">enable = #{clog.enable},</if>
+    <if test="clog.def01 != null">def01 = #{clog.def01},</if>
+    <if test="clog.def02 != null">def02 = #{clog.def02},</if>
+    <if test="clog.def03 != null">def03 = #{clog.def03},</if>
+    <if test="clog.def04 != null">def04 = #{clog.def04},</if>
+    <if test="clog.def05 != null">def05 = #{clog.def05},</if>
+    <if test="clog.def06 != null">def06 = #{clog.def06},</if>
+    <if test="clog.def07 != null">def07 = #{clog.def07},</if>
+    <if test="clog.def08 != null">def08 = #{clog.def08},</if>
+    <if test="clog.def09 != null">def09 = #{clog.def09},</if>
+    <if test="clog.def10 != null">def10 = #{clog.def10},</if>
+    <if test="clog.def11 != null">def11 = #{clog.def11},</if>
+    <if test="clog.def12 != null">def12 = #{clog.def12},</if>
+    <if test="clog.def13 != null">def13 = #{clog.def13},</if>
+    <if test="clog.def14 != null">def14 = #{clog.def14},</if>
+    <if test="clog.def15 != null">def15 = #{clog.def15},</if>
+    <if test="clog.def16 != null">def16 = #{clog.def16},</if>
+    <if test="clog.def17 != null">def17 = #{clog.def17},</if>
+    <if test="clog.def18 != null">def18 = #{clog.def18},</if>
+    <if test="clog.def19 != null">def19 = #{clog.def19},</if>
+    <if test="clog.def20 != null">def20 = #{clog.def20},</if>
+    <if test="clog.pkGroup != null">pk_group = #{clog.pkGroup},</if>
+    <if test="clog.pkOrg != null">pk_org = #{clog.pkOrg},</if>
+    <if test="clog.pkOrgV != null">pk_org_v = #{clog.pkOrgV},</if>
+    <if test="clog.creator != null">creator = #{clog.creator},</if>
+    <if test="clog.creationtime != null">creationtime = #{clog.creationtime},</if>
+    <if test="clog.modifier != null">modifier = #{clog.modifier},</if>
+    <if test="clog.modifiedtime != null">modifiedtime = #{clog.modifiedtime},</if>
+    <if test="clog.memo != null">memo = #{clog.memo}</if>
+    <!-- 需要更多条件继续追加 -->
+  </where>
+</delete>
+
+ <!--日志部分-map*********************************************-->
+<!-- 与 Mapper 接口中的方法同名 -->
+<insert id="insertMyLog" parameterType="map">
+    INSERT INTO pub_clog
+    (
+        pk_log, code, name, src_sys, src_id, res_direct,
+        logdate, ip, url, action, sessionid, token, userid,
+        state, response, request, thwmsg, message, restcode,
+        startime, endtime, runtime, datatype, billdate,
+        enable,
+        def01, def02, def03, def04, def05,
+        def06, def07, def08, def09, def10,
+        def11, def12, def13, def14, def15,
+        def16, def17, def18, def19, def20,
+        pk_group, pk_org, pk_org_v,
+        creator, creationtime, modifier, modifiedtime, memo,
+        cookes,referer,localaddr,clientip,
+   		tenantid,tenantcode
+    )
+    VALUES
+    (
+        #{logMap.pk_log},         #{logMap.code},        #{logMap.name},
+        #{logMap.src_sys},        #{logMap.src_id},      #{logMap.res_direct},
+        #{logMap.logdate},        #{logMap.ip},          #{logMap.url},
+        #{logMap.action},         #{logMap.sessionid},   #{logMap.token},
+        #{logMap.userid},         #{logMap.state},       #{logMap.response},
+        #{logMap.request},        #{logMap.thwmsg},      #{logMap.message},
+        #{logMap.restcode},       #{logMap.startime},    #{logMap.endtime},
+        #{logMap.runtime},        #{logMap.datatype},    #{logMap.billdate},
+        #{logMap.enable},
+        #{logMap.def01},          #{logMap.def02},       #{logMap.def03},
+        #{logMap.def04},          #{logMap.def05},       #{logMap.def06},
+        #{logMap.def07},          #{logMap.def08},       #{logMap.def09},
+        #{logMap.def10},          #{logMap.def11},       #{logMap.def12},
+        #{logMap.def13},          #{logMap.def14},       #{logMap.def15},
+        #{logMap.def16},          #{logMap.def17},       #{logMap.def18},
+        #{logMap.def19},          #{logMap.def20},
+        #{logMap.pk_group},       #{logMap.pk_org},      #{logMap.pk_org_v},
+        #{logMap.creator},        #{logMap.creationtime}, #{logMap.modifier},
+        #{logMap.modifiedtime},   #{logMap.memo},
+        #{logMap.cookes},         #{logMap.referer},     #{logMap.localaddr}, 
+        #{logMap.clientip},       #{logMap.tenantid},    #{logMap.tenantcode}
+    )
+</insert>
+
+ <!-- 根据 pk_log 主键更新，仅更新 Map 中非 null 的字段 -->
+<update id="updateMyLog" parameterType="map">
+  UPDATE pub_clog
+  <set>
+    
+    <if test="logMap.cookes != null">cookes = #{logMap.cookes},</if>
+    <if test="logMap.referer != null">referer = #{logMap.referer},</if>
+    <if test="logMap.localaddr != null">localaddr = #{logMap.localaddr},</if>
+    <if test="logMap.clientip != null">clientip = #{logMap.clientip},</if> 
+    <if test="logMap.tenantid != null">tenantid = #{logMap.tenantid},</if>
+    <if test="logMap.tenantcode != null">tenantcode = #{logMap.tenantcode},</if> 
+    
+    <if test="logMap.name != null">name = #{logMap.name},</if>
+    <if test="logMap.src_sys != null">src_sys = #{logMap.src_sys},</if>
+    <if test="logMap.src_id != null">src_id = #{logMap.src_id},</if>
+    <if test="logMap.res_direct != null">res_direct = #{logMap.res_direct},</if>
+    <if test="logMap.logdate != null">logdate = #{logMap.logdate},</if>
+    <if test="logMap.ip != null">ip = #{logMap.ip},</if>
+    <if test="logMap.url != null">url = #{logMap.url},</if>
+    <if test="logMap.action != null">action = #{logMap.action},</if>
+    <if test="logMap.sessionid != null">sessionid = #{logMap.sessionid},</if>
+    <if test="logMap.token != null">token = #{logMap.token},</if>
+    <if test="logMap.userid != null">userid = #{logMap.userid},</if>
+    <if test="logMap.state != null">state = #{logMap.state},</if>
+    <if test="logMap.response != null">response = #{logMap.response},</if>
+    <if test="logMap.request != null">request = #{logMap.request},</if>
+    <if test="logMap.thwmsg != null">thwmsg = #{logMap.thwmsg},</if>
+    <if test="logMap.message != null">message = #{logMap.message},</if>
+    <if test="logMap.restcode != null">restcode = #{logMap.restcode},</if>
+    <if test="logMap.startime != null">startime = #{logMap.startime},</if>
+    <if test="logMap.endtime != null">endtime = #{logMap.endtime},</if>
+    <if test="logMap.runtime != null">runtime = #{logMap.runtime},</if>
+    <if test="logMap.datatype != null">datatype = #{logMap.datatype},</if>
+    <if test="logMap.billdate != null">billdate = #{logMap.billdate},</if>
+    <if test="logMap.enable != null">enable = #{logMap.enable},</if>
+    <if test="logMap.def01 != null">def01 = #{logMap.def01},</if>
+    <if test="logMap.def02 != null">def02 = #{logMap.def02},</if>
+    <if test="logMap.def03 != null">def03 = #{logMap.def03},</if>
+    <if test="logMap.def04 != null">def04 = #{logMap.def04},</if>
+    <if test="logMap.def05 != null">def05 = #{logMap.def05},</if>
+    <if test="logMap.def06 != null">def06 = #{logMap.def06},</if>
+    <if test="logMap.def07 != null">def07 = #{logMap.def07},</if>
+    <if test="logMap.def08 != null">def08 = #{logMap.def08},</if>
+    <if test="logMap.def09 != null">def09 = #{logMap.def09},</if>
+    <if test="logMap.def10 != null">def10 = #{logMap.def10},</if>
+    <if test="logMap.def11 != null">def11 = #{logMap.def11},</if>
+    <if test="logMap.def12 != null">def12 = #{logMap.def12},</if>
+    <if test="logMap.def13 != null">def13 = #{logMap.def13},</if>
+    <if test="logMap.def14 != null">def14 = #{logMap.def14},</if>
+    <if test="logMap.def15 != null">def15 = #{logMap.def15},</if>
+    <if test="logMap.def16 != null">def16 = #{logMap.def16},</if>
+    <if test="logMap.def17 != null">def17 = #{logMap.def17},</if>
+    <if test="logMap.def18 != null">def18 = #{logMap.def18},</if>
+    <if test="logMap.def19 != null">def19 = #{logMap.def19},</if>
+    <if test="logMap.def20 != null">def20 = #{logMap.def20},</if>
+    <if test="logMap.pk_group != null">pk_group = #{logMap.pk_group},</if>
+    <if test="logMap.pk_org != null">pk_org = #{logMap.pk_org},</if>
+    <if test="logMap.pk_org_v != null">pk_org_v = #{logMap.pk_org_v},</if>
+    <if test="logMap.creator != null">creator = #{logMap.creator},</if>
+    <if test="logMap.creationtime != null">creationtime = #{logMap.creationtime},</if>
+    <if test="logMap.modifier != null">modifier = #{logMap.modifier},</if>
+    <if test="logMap.modifiedtime != null">modifiedtime = #{logMap.modifiedtime},</if>
+    <if test="logMap.memo != null">memo = #{logMap.memo}</if>
+    
+  </set>
+  WHERE pk_log = #{logMap.pk_log}
+</update>
+
+<!-- 根据主键删除单条日志 -->
+<delete id="deleteMyLogByPk" parameterType="string">
+    DELETE FROM pub_clog
+    WHERE pk_log = #{pk_log}
+</delete>
+
+<delete id="deleteMyLogByPk" parameterType="map">
+  DELETE FROM pub_clog
+  <where>
+    pk_log = #{logMap.pk_log} 
+    <!-- 需要更多条件继续追加 -->
+  </where>
+</delete>
+
+<!-- 动态条件删除，logMap 中只放需要的过滤字段 -->
+<delete id="deleteMyLog" parameterType="map">
+  DELETE FROM pub_clog
+  <where>
+  
+    <if test="logMap.cookes != null">cookes = #{logMap.cookes},</if>
+    <if test="logMap.referer != null">referer = #{logMap.referer},</if>
+    <if test="logMap.localaddr != null">localaddr = #{logMap.localaddr},</if>
+    <if test="logMap.clientip != null">clientip = #{logMap.clientip},</if> 
+    <if test="logMap.tenantid != null">tenantid = #{logMap.tenantid},</if>
+    <if test="logMap.tenantcode != null">tenantcode = #{logMap.tenantcode},</if> 
+    
+   <!-- pk_log = #{logMap.pk_log} -->
+    <if test="logMap.code != null">code = #{logMap.code},</if>
+    <if test="logMap.name != null">name = #{logMap.name},</if>
+    <if test="logMap.src_sys != null">src_sys = #{logMap.src_sys},</if>
+    <if test="logMap.src_id != null">src_id = #{logMap.src_id},</if>
+    <if test="logMap.res_direct != null">res_direct = #{logMap.res_direct},</if>
+    <if test="logMap.logdate != null">logdate = #{logMap.logdate},</if>
+    <if test="logMap.ip != null">ip = #{logMap.ip},</if>
+    <if test="logMap.url != null">url = #{logMap.url},</if>
+    <if test="logMap.action != null">action = #{logMap.action},</if>
+    <if test="logMap.sessionid != null">sessionid = #{logMap.sessionid},</if>
+    <if test="logMap.token != null">token = #{logMap.token},</if>
+    <if test="logMap.userid != null">userid = #{logMap.userid},</if>
+    <if test="logMap.state != null">state = #{logMap.state},</if>
+    <if test="logMap.response != null">response = #{logMap.response},</if>
+    <if test="logMap.request != null">request = #{logMap.request},</if>
+    <if test="logMap.thwmsg != null">thwmsg = #{logMap.thwmsg},</if>
+    <if test="logMap.message != null">message = #{logMap.message},</if>
+    <if test="logMap.restcode != null">restcode = #{logMap.restcode},</if>
+    <if test="logMap.startime != null">startime = #{logMap.startime},</if>
+    <if test="logMap.endtime != null">endtime = #{logMap.endtime},</if>
+    <if test="logMap.runtime != null">runtime = #{logMap.runtime},</if>
+    <if test="logMap.datatype != null">datatype = #{logMap.datatype},</if>
+    <if test="logMap.billdate != null">billdate = #{logMap.billdate},</if>
+    <if test="logMap.enable != null">enable = #{logMap.enable},</if>
+    <if test="logMap.def01 != null">def01 = #{logMap.def01},</if>
+    <if test="logMap.def02 != null">def02 = #{logMap.def02},</if>
+    <if test="logMap.def03 != null">def03 = #{logMap.def03},</if>
+    <if test="logMap.def04 != null">def04 = #{logMap.def04},</if>
+    <if test="logMap.def05 != null">def05 = #{logMap.def05},</if>
+    <if test="logMap.def06 != null">def06 = #{logMap.def06},</if>
+    <if test="logMap.def07 != null">def07 = #{logMap.def07},</if>
+    <if test="logMap.def08 != null">def08 = #{logMap.def08},</if>
+    <if test="logMap.def09 != null">def09 = #{logMap.def09},</if>
+    <if test="logMap.def10 != null">def10 = #{logMap.def10},</if>
+    <if test="logMap.def11 != null">def11 = #{logMap.def11},</if>
+    <if test="logMap.def12 != null">def12 = #{logMap.def12},</if>
+    <if test="logMap.def13 != null">def13 = #{logMap.def13},</if>
+    <if test="logMap.def14 != null">def14 = #{logMap.def14},</if>
+    <if test="logMap.def15 != null">def15 = #{logMap.def15},</if>
+    <if test="logMap.def16 != null">def16 = #{logMap.def16},</if>
+    <if test="logMap.def17 != null">def17 = #{logMap.def17},</if>
+    <if test="logMap.def18 != null">def18 = #{logMap.def18},</if>
+    <if test="logMap.def19 != null">def19 = #{logMap.def19},</if>
+    <if test="logMap.def20 != null">def20 = #{logMap.def20},</if>
+    <if test="logMap.pk_group != null">pk_group = #{logMap.pk_group},</if>
+    <if test="logMap.pk_org != null">pk_org = #{logMap.pk_org},</if>
+    <if test="logMap.pk_org_v != null">pk_org_v = #{logMap.pk_org_v},</if>
+    <if test="logMap.creator != null">creator = #{logMap.creator},</if>
+    <if test="logMap.creationtime != null">creationtime = #{logMap.creationtime},</if>
+    <if test="logMap.modifier != null">modifier = #{logMap.modifier},</if>
+    <if test="logMap.modifiedtime != null">modifiedtime = #{logMap.modifiedtime},</if>
+    <if test="logMap.memo != null">memo = #{logMap.memo}</if>
+    
+    <!-- 可以继续追加需要作为删除条件的字段 -->
+  </where>
+</delete>
+
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<authorizes>
+  <authorize>
+  	<appcode>*</appcode>
+  	<actions>
+       <action>baseapp.clog.SaveClogVOAction</action>
+       <action>baseapp.clog.LoadClogVOAction</action>
+       <action>baseapp.clog.CopyClogVOAction</action>
+       <action>baseapp.clog.PrintClogVOAction</action>
+       <action>baseapp.clog.ListClogVOAction</action>
+       <action>baseapp.clog.DeleteClogVOAction</action>
+       <action>baseapp.clog.Pub_clogDefaultGridRefAction</action>
+       <action>baseapp.clog.AddClogVOAction</action>
+	</actions>
+   </authorize>
+</authorizes>
