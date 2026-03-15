@@ -2,25 +2,33 @@
 
 #### 介绍
 这是一个用于记录接口调用情况的工程。
-表名：pub_clog
-对象：ClogVO
-放在baseapp下面，方便调用。。。
+表名：pub_clog  
+对象：ClogVO  
+放在baseapp下面，方便调用。。。  
 
 
-#### 软件架构
-   用友baseapp日志记录，<客开功能>
+#### 介绍
+
+#### 安装 | Installation
+
+###### github: https://github.com/lichengdev/yyappclog.git
+###### gitee: https://gitee.com/lichengdev/yyappclog.git
+
+#### 软件架构 
+   用友baseapp日志记录，<客开功能>  
 
 
 #### 安装教程
 
-
-   git config --global user.name "你的姓名"
-   git config --global user.email "你的邮箱@example.com"
+1.  xxxx
+2.  xxxx
+3.  xxxx
+   git config --global user.name "你的姓名"  
+   git config --global user.email "你的邮箱@example.com"  
    
-
 #### 使用说明
 
-   git clone https://github.com/lichengdev/yyappclog.git 从远程库中克隆
+   git clone https://gitee.com/lichengdev/yyappclog.git  从远程库中克隆
    git branch  查看当前所有的分支
    git checkout 分支名  作用是切换分支
    
@@ -47,3 +55,24 @@
 5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
 6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
  
+ 
+ 
+<div align="center">
+    <img src="icons/00.png" alt="项目Logo" width="16">
+    <img src="icons/01.png" alt="项目Logo" width="16">
+    <img src="icons/02.png" alt="项目Logo" width="16">
+    <img src="icons/03.png" alt="项目Logo" width="16">
+    <img src="icons/04.png" alt="项目Logo" width="16">
+    <img src="icons/05.png" alt="项目Logo" width="16">
+    <img src="icons/06.png" alt="项目Logo" width="16">
+    <img src="icons/07.png" alt="项目Logo" width="16">
+    <img src="icons/08.png" alt="项目Logo" width="16">
+    <img src="icons/09.png" alt="项目Logo" width="16"> 
+    <img src="icons/10.png" alt="项目Logo" width="16"> 
+    <br>
+    <!-- 徽章示例：构建状态、版本、许可证、下载量等 -->
+    <img src="https://img.shields.io/badge/version-1.0.0-blue.svg" alt="Version 1.0.0">
+    <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="MIT License">
+</div>
+
+
