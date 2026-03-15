@@ -9,6 +9,8 @@
 
 #### 介绍
 
+   用友`baseapp`日志记录，<客开功能>  
+   
 #### 安装 | Installation
 
 ###### github: https://github.com/lichengdev/yyappclog.git

@@ -9,13 +9,14 @@
 
 #### 介绍
 
+   用友`baseapp`日志记录，<客开功能>  
+   
 #### 安装 | Installation
 
 ###### github: https://github.com/lichengdev/yyappclog.git
 ###### gitee: https://gitee.com/lichengdev/yyappclog.git
 
-#### 软件架构 
-   用友baseapp日志记录，<客开功能>  
+#### 软件架构  
 
 
 #### 安装教程
